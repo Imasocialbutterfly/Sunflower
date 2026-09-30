@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  font-family: 'Quicksand', system-ui, sans-serif;
+  color-scheme: dark;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background: #000;
+  overflow: hidden;
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.font-serif {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* iOS safe-area helpers */
+.pt-safe { padding-top: max(env(safe-area-inset-top), 0.75rem); }
+.pb-safe { padding-bottom: max(env(safe-area-inset-bottom), 1rem); }
+.pl-safe { padding-left: max(env(safe-area-inset-left), 0.75rem); }
+.pr-safe { padding-right: max(env(safe-area-inset-right), 0.75rem); }
+
+/* floating sunflower petals on the gate screen */
+@keyframes floatPetal {
+  0%   { transform: translateY(0) rotate(0deg); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translateY(-115vh) rotate(360deg); opacity: 0; }
+}
